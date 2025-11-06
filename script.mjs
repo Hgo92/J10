@@ -40,10 +40,8 @@ console.log("Premier Pokémon :", pokedex.pokemon[0].name);
  */
 function countPokemon() {
   return (console.log(pokedex.pokemon.length))
-  
-  // TODO : compter les Pokémon à partir de pokedex.pokemon
 }
-
+countPokemon()
 /**
  * Retourne un tableau des Pokémon pesant plus de 10 kg
  */
