@@ -46,14 +46,23 @@ countPokemon()
  * Retourne un tableau des Pokémon pesant plus de 10 kg
  */
 function heavyPokemon() {
-  // TODO : filtrer selon le champ "weight" (ex: "6.9 kg" -> penser à parseFloat)
+  let bigPokemon = []
+
+for (let i = 0; i < pokedex.pokemon.length; i++) {
+  let weightPoke = parseFloat(pokedex.pokemon[i].weight)
+  if (weightPoke > 10) {
+    bigPokemon.push(pokedex.pokemon[i].name)
+  } }
+
+  return(console.log(bigPokemon))
 }
+heavyPokemon()
 
 /**
  * Retourne la liste des Pokémon triés par poids (croissant)
  */
 function sortByWeight() {
-  // TODO : trier le tableau pokedex.pokemon par poids
+ 
 }
 
 /**
