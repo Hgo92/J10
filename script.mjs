@@ -93,7 +93,7 @@ function searchPokemon(name) {
       let faiblessesText = ""
 
       for (let i = 0; i < faiblesses.length; i++) {
-        if (i<faiblesses.length-1) {
+        if (i < faiblesses.length-1) {
         faiblessesText += `${search.weaknesses[i]}, `
         } else { faiblessesText +=`${search.weaknesses[i]}`
         }
@@ -136,7 +136,7 @@ sortByWeight(4)
 
 getEvolutions("Bulbasaur")
 
-searchPokemon("Squirtle")
+searchPokemon("Bulbasaur")
 searchPokemon("Proutivore")
 
 // ---------------------------------------------------------------
