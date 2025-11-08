@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Pokedex trop cool !</title>
-    <script src="script.mjs"></script>
+    <script type="module" defer src="script.mjs"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div id = "container-choix">
+        <input id = "choixPoke" placeholder="Pokemon Name">
+        <button id = "buttonPoke">C'est parti !</button>
+    </div>
     <section id = "pokedex">
-        <div id = "container-titre">
-            <h1>Pokemon</h1>
-            <div id ="num"></div>
-
-        </div>
-        <div id = image>
-
-        </div>
-        <div id = "pokeText">
-            
-        </div>
+        <h1 id ="titre">Pokemon</h1>
+        <div id ="num"></div>
+        <img id = image></img>
+        <div id = "evolutions"></div>
+        <div id = "taille"></div>
+        <div id = "poids"></div>
+        <div id = "types"></div>
+        <div id = "faiblesses"></div>
     </section>
 </body>
+<script defer src="script.mjs"></script>
 </html>
