@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: pokeFontHollow; 
-  src: url(/fonts/Pokemon\ Hollow.ttf.ttf); 
+  src: url(/fonts/Pokemon\ Hollow.ttf); 
 }
 
 * {
@@ -13,6 +13,10 @@
     font-size: 18px;
     margin: 0;
     padding: 0;
+    letter-spacing: 2.5px;
+    text-align: center;
+    align-items : center;
+    justify-content: center;
 }
 
 body {
@@ -20,6 +24,49 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('/fond_pokemon.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#container-choix {
+    margin-bottom : 10px;
+    display : flex;
+    gap : 6px;
+    border: 10px solid #FFDE00;
+    justify-content: space-between;
+}
+
+input {
+    padding : 5px;
+    width : 180px;
+    border: 0px;
+}
+
+button {
+    width : 160px;
+    height: 40%;
+    padding : 5px 0px 10px 0px;
+    border : 2px solid black;
+    border-radius : 10px;
+    background-color: #ee1515;
+    color: #f0f0f0;
+    margin: 5px;
+    
+}
+
+button:hover {
+    background-color: #f47272;
+}
+
+button:active {
+     background-color: #222224;
+
+}
+
+#back-card {
+    width: 360px;
+    height: 504px;
 }
 
 #pokedex {
@@ -28,49 +75,125 @@ body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 2px solid #333;
+    border: 10px solid #FFDE00;
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(7, 1fr);
-    gap: 8px;
+    padding: 5px;
+    gap:10px;
+}
+
+#pokedex > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 #titre {
     grid-column: span 3 / span 3;
+    font-size: 1.5rem;
+    border : 5px solid black;
+    border-radius: 20px;
+    padding : 2px 10px 10px 10px;
+    width : 80%;
+    height: 50px;
+    background-color: #FFDE00;
+    text-align: center;
+    align-items : center;
 }
 
 #num {
     grid-column-start: 4;
+    border: 5px solid #FFDE00;
+    border-radius: 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    padding-bottom: 8px;
+    height: 50px;
+    background-color: rgb(239, 243, 230);
 }
 
-#image {
+#box-image {
     grid-column: span 4 / span 4;
     grid-row: span 2 / span 2;
     grid-row-start: 2;
+    justify-self: center;
+    border: 5px solid #FFDE00;
+    border-radius: 20px;
+    background-color: aliceblue;
+    width : 95%;
+    min-height: 95%;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/176622e8-bf4c-4d60-9a64-b75cff245c16/d3inhyi-28e16cb6-9d37-4a6e-bdc6-0d7fcf0af574.pnghttps://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/176622e8-bf4c-4d60-9a64-b75cff245c16/d3inhyi-28e16cb6-9d37-4a6e-bdc6-0d7fcf0af574.png/v1/fit/w_426,h_613,q_70,strp/pokemon_tcg_colorless_texture_by_ilkcmp_d3inhyi-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjEzIiwicGF0aCI6Ii9mLzE3NjYyMmU4LWJmNGMtNGQ2MC05YTY0LWI3NWNmZjI0NWMxNi9kM2luaHlpLTI4ZTE2Y2I2LTlkMzctNGE2ZS1iZGM2LTBkN2ZjZjBhZjU3NC5wbmciLCJ3aWR0aCI6Ijw9NDI2In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.yjZnG5s6Tu1I5WrXGhd1j2jDkzu_veGT1JsOsfGk7nw");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: bottom;
+}
+
+#image {
+    width: 40%;
+    max-height: 100vh;
+
 }
 
 #evolutions {
     grid-column: span 4 / span 4;
-    grid-row-start: 4;
+    grid-row-start: 5;
+    border: 5px solid #FFDE00;
+    border-radius: 20px;
+    background-color: aliceblue;
+    font-size: 0.8rem;
+    line-height: 30px;
+    height: 80%;
 }
 
 #taille {
     grid-column: span 2 / span 2;
-    grid-row-start: 5;
+    grid-row-start: 4;
+    border: 5px solid #FFDE00;
+    border-radius: 20px;
+    background-color: aliceblue;
+    width: 90%;
+    height: 80%;
+    justify-self: center;
 }
 
 #poids {
     grid-column: span 2 / span 2;
     grid-column-start: 3;
-    grid-row-start: 5;
+    grid-row-start: 4;
+    border: 5px solid #FFDE00;
+    border-radius: 20px;
+    background-color: aliceblue;
+    width: 90%;
+    height: 80%;
+    justify-self: center;
 }
 
 #types {
     grid-column: span 4 / span 4;
     grid-row-start: 6;
+    border: 5px solid #FFDE00;
+    border-radius: 20px;
+    background-color: aliceblue;
+    height: 40px;
+    padding-bottom: 5px;
+    font-size: 0.8rem;
+    height: 80%;
 }
 
 #faiblesses {
     grid-column: span 4 / span 4;
     grid-row-start: 7;
+    border: 5px solid #FFDE00;
+    border-radius: 20px;
+    background-color: aliceblue;
+    font-size: 0.8rem;
+    line-height: 30px;
+    padding-bottom: 5px;
+    height: 80%;
+
 }
+
